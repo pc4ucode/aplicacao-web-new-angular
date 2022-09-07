@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var base_ships_1 = require("./base-ships");
 var starfighters_1 = require("./starfighters");
+var _ = require("lodash");
+console.log(_.pad("Typescript Examples", 40, '='));
 /*
 // Declaracao de variaveis
 let message: string = "Help me, Obi-wan Kenobi. You're my only hope!";

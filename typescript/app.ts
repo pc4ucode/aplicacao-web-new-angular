@@ -1,5 +1,7 @@
 import {Spacecraft, Containership} from './base-ships';
 import {MilleniumFalcon} from './starfighters';
+import * as _ from 'lodash';
+console.log(_.pad("Typescript Examples", 40, '='));
 
 /*
 // Declaracao de variaveis
