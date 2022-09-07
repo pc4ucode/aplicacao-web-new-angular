@@ -1,3 +1,6 @@
+import {Spacecraft, Containership} from './base-ships';
+import {MilleniumFalcon} from './starfighters';
+
 /*
 // Declaracao de variaveis
 let message: string = "Help me, Obi-wan Kenobi. You're my only hope!";
@@ -30,44 +33,12 @@ function inc (speed: number, inc: number = 1) : number {
 console.log(`inc (5, 1) = ${inc(5, 1)}`)
 console.log(`inc (5) = ${inc(5)}`) */
 
-// Usando Classes e interfaces
-class Spacecraft {
-    constructor (public propulsor: string) {
-        
-    }
-
-    jumpIntoHyperspace() {
-        console.log(`Entering hyperspace with ${this.propulsor}`);
-    }
-}
-
 let ship = new Spacecraft('hyperdrive');
 ship.jumpIntoHyperspace();
-
-class MilleniumFalcon extends Spacecraft implements Containership {
-
-    cargoContainers: number;
-
-    constructor() {
-        super('hyperdrive');
-        this.cargoContainers = 4;
-    }
-
-    jumpIntoHyperspace() {
-        if(Math.random() >= 0.5) {
-            super.jumpIntoHyperspace;
-        } else {
-            console.log('Failed to jump into hyperspace');
-        }
-    }
-}
 
 let falcon = new MilleniumFalcon();
 falcon.jumpIntoHyperspace();
 
-interface Containership {
-    cargoContainers: number;
-}
 
 let goodForTheJob = ( ship: Containership ) => ship.cargoContainers > 2;
 
