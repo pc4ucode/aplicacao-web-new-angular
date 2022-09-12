@@ -31,6 +31,9 @@
               class="form-control"
               name="address"
               placeholder="Endereço"
+              autocomplete="off"
+              minlength="5"
+              required
             />
             <span class="help-block"></span>
           </div>
@@ -46,6 +49,8 @@
               class="form-control"
               name="number"
               placeholder="Número"
+              required
+              autocomplete="off"
             />
             <span class="help-block"><i class="fa fa-check"></i> Ok</span>
           </div>
@@ -230,9 +235,9 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <a href="order-summary.html" class="btn btn-success pull-right"
+        <button class="btn btn-success pull-right" [disabled]="!form.valid"
           ><i class="fa fa-credit-card"></i> Concluir Pedido
-        </a>
+        </button>
       </div>
     </div>
   </section>
