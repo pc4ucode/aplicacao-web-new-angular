@@ -47,6 +47,8 @@ export class OrderComponent implements OnInit {
     order.orderItems = this.cartItems()
       .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id))
 
+    this.orderService.checkOrder(order).subscribe()
+
     console.log(order)
   }
 
